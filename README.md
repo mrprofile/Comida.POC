@@ -1,6 +1,8 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
+This program is a C# console application that interacts with Kubernetes to create and monitor a Job.
+
 To run the project locally, follow these simple steps below.
 
 ### Prerequisites
@@ -69,3 +71,29 @@ To run the Comida.Director.POC container, run the following command.
   ```sh
   kubectl describe job
   ```
+
+## Functionality
+1. **Command-Line Interface (CLI):**
+
+   * The application uses the Spectre.Console.Cli library for defining and handling command-line arguments.
+
+
+2. **ConsoleCommand Class:**
+
+   * Represents the command to be executed, inheriting from AsyncCommand<ConsoleSettings>.
+   * ConsoleSettings defines command-line arguments (Arg1 and Arg2) using the CommandArgument attribute.
+
+
+3. **ExecuteAsync Method:**
+
+   * Executed when the command is run.
+   * Displays a stylized text banner, reads command-line arguments, and loads a Kubernetes Job definition from a YAML file.
+   * Modifies the Job metadata and container arguments based on the command-line arguments.
+   * Creates a Kubernetes client, sets up a Job, and watches for related events (Pod creation/deletion).
+   * Outputs information about watched events, including Pod names and labels.
+
+
+4. **Notes:**
+
+   * Ensure that the Kubernetes configuration file (config) is present in the current directory.
+   * C# 8 language features are required for the await foreach loop.
