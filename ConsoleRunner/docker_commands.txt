@@ -1,0 +1,5 @@
+docker build . -t comida.console.poc
+docker run comida.console.poc argument1 argument2
+
+docker build . -t mrprofile/comida.console.poc:v1
+docker push mrprofile/comida.console.poc:v1

@@ -1,0 +1,17 @@
+docker build . -t mrprofile/comida.director.poc
+docker run mrprofile/comida.director.poc argument1 argument2
+
+docker build . -t mrprofile/comida.director.poc:v1
+docker push mrprofile/comida.director.poc:v1
+
+DEMO Commands:
+
+docker pull mrprofile/comida.director.poc:v1
+docker run mrprofile/comida.director.poc:v1 argument-1 argument-2
+
+Kubernetes Commands:
+
+kubectl get jobs
+kubectl get pods
+kubectl logs comida-carlo-container-cmps7
+kubectl logs comida
