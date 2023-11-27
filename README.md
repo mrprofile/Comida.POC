@@ -16,8 +16,8 @@ Pull the latest image by running the command below.
   docker pull mrprofile/comida.director.poc:v1
   ```
 
-_The application requires modification to your local kubernetes config file to match the containerized applicaition config. Copy the config below to your local kubernetes config. It is usually located in C:\Users\\{your_user_account}\\.kube\config_
-_You can also copy the file directly from the ConsoleDirectory project solution file, the file name is config._
+_The application requires modification to your local kubernetes config file to match the containerized application config. Copy the config below to your local kubernetes config. It is usually located in C:\Users\\{your_user_account}\\.kube\config_
+_You can also copy the file directly from the ConsoleDirector project, the file name is config._
 
 * kuberntes config
 ```
